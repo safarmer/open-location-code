@@ -21,9 +21,9 @@ import 'utils.dart';
 // code,lat,lng,latLo,lngLo,latHi,lngHi
 void checkEncodeDecode(String csvLine) {
   var elements = csvLine.split(',');
-  num lat = double.parse(elements[0]);
-  num lng = double.parse(elements[1]);
-  num len = int.parse(elements[2]);
+  var lat = double.parse(elements[0]);
+  var lng = double.parse(elements[1]);
+  var len = int.parse(elements[2]);
   var want = elements[3];
   var got = olc.encode(lat, lng, codeLength: len);
   expect(got, equals(want));
